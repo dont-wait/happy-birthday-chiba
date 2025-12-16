@@ -391,6 +391,167 @@
         opacity: 0;
       }
     }
+
+    /* ========== RESPONSIVE FOR MOBILE ========== */
+    @media screen and (max-width: 768px) {
+      #title {
+        font-size: 20px;
+        padding: 0 10px;
+      }
+
+      #hint {
+        padding: 20px 25px;
+        max-width: 90%;
+        top: 20%;
+      }
+
+      #hint-icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      #hint-text {
+        font-size: 16px;
+      }
+
+      #status {
+        bottom: 20px;
+        padding: 12px 20px;
+        font-size: 14px;
+        max-width: 90%;
+      }
+
+      .steps {
+        right: 10px;
+        padding: 15px;
+        max-width: 150px;
+      }
+
+      .step {
+        padding: 8px;
+        margin-bottom: 8px;
+      }
+
+      .step i {
+        font-size: 16px;
+      }
+
+      .step-text {
+        font-size: 12px;
+      }
+
+      .message-title {
+        font-size: 28px;
+        padding: 0 15px;
+      }
+
+      .message-subtitle {
+        font-size: 18px;
+        padding: 0 15px;
+      }
+
+      .message-icon {
+        font-size: 24px;
+        margin: 0 5px;
+      }
+
+      #birthday-message {
+        top: 10%;
+        max-width: 95%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      #title {
+        font-size: 18px;
+      }
+
+      #hint {
+        padding: 15px 20px;
+        top: 25%;
+      }
+
+      #hint-icon {
+        font-size: 35px;
+      }
+
+      #hint-text {
+        font-size: 14px;
+      }
+
+      .steps {
+        display: none;
+      }
+
+      #status {
+        bottom: 15px;
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+
+      .spinner {
+        width: 16px;
+        height: 16px;
+        border-width: 2px;
+      }
+
+      .message-title {
+        font-size: 22px;
+        line-height: 1.3;
+      }
+
+      .message-subtitle {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .message-icon {
+        font-size: 20px;
+        margin: 0 3px;
+      }
+
+      #birthday-message {
+        top: 8%;
+      }
+    }
+
+    @media screen and (orientation: landscape) and (max-height: 500px) {
+      #hint {
+        top: 10%;
+        padding: 15px 20px;
+      }
+
+      #hint-icon {
+        font-size: 30px;
+        margin-bottom: 8px;
+      }
+
+      #hint-text {
+        font-size: 14px;
+      }
+
+      #birthday-message {
+        top: 5%;
+      }
+
+      .message-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .message-subtitle {
+        font-size: 16px;
+      }
+
+      .message-icon {
+        font-size: 20px;
+      }
+
+      .steps {
+        top: 40%;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -413,12 +574,12 @@
 <div id="birthday-message">
   <div class="message-title">
     <i class="fas fa-birthday-cake message-icon icon-cake"></i>
-    Chị Ba đã mở khóa thành tựu mớiii
+    Chúc Mừng Sinh Nhật
     <i class="fas fa-party-horn message-icon icon-party"></i>
   </div>
   <div class="message-subtitle">
     <i class="fas fa-sparkles message-icon icon-sparkles"></i>
-    Chúc Chị Ba cùng Anh Ba và Bé sinh nhật luôn vui vẻ ạ!
+    Chúc bạn luôn vui vẻ, hạnh phúc và mạnh khỏe!
     <i class="fas fa-heart message-icon icon-sparkles"></i>
   </div>
 </div>
