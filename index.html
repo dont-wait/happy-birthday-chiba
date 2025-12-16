@@ -615,6 +615,14 @@
         padding: 10px;
       }
     }
+
+    /* Fix heart canvas on mobile */
+    @media screen and (max-width: 768px) {
+      #heart {
+        width: 100vw !important;
+        height: 100vh !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -637,12 +645,12 @@
 <div id="birthday-message">
   <div class="message-title">
     <i class="fas fa-birthday-cake message-icon icon-cake"></i>
-    Mừng Sinh Nhật Chị Baaa
+    Chúc Mừng Sinh Nhật
     <i class="fas fa-party-horn message-icon icon-party"></i>
   </div>
   <div class="message-subtitle">
     <i class="fas fa-sparkles message-icon icon-sparkles"></i>
-    Chúc chị Ba sinh nhật cùng Bé và Aba thật vui ạ!
+    Chúc bạn luôn vui vẻ, hạnh phúc và mạnh khỏe!
     <i class="fas fa-heart message-icon icon-sparkles"></i>
   </div>
 </div>
@@ -715,6 +723,11 @@ var initHeart = function () {
     var ctx = canvas.getContext('2d');
     var width = canvas.width = koef * innerWidth;
     var height = canvas.height = koef * innerHeight;
+    
+    // Force canvas to fill screen on mobile
+    canvas.style.width = '100vw';
+    canvas.style.height = '100vh';
+    
     var rand = Math.random;
     ctx.fillStyle = "rgba(0,0,0,1)";
     ctx.fillRect(0, 0, width, height);
@@ -730,6 +743,8 @@ var initHeart = function () {
     window.addEventListener('resize', function () {
         width = canvas.width = koef * innerWidth;
         height = canvas.height = koef * innerHeight;
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
         ctx.fillStyle = "rgba(0,0,0,1)";
         ctx.fillRect(0, 0, width, height);
     });
@@ -772,7 +787,7 @@ var initHeart = function () {
 
     var config = {
         traceK: 0.4,
-        timeDelta: 0.1
+        timeDelta: 0.005
     };
 
     var time = 0;
